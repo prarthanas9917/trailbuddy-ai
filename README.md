@@ -4,6 +4,9 @@ TrailBuddy turns a little free time into a reason to step outside. Share a
 neighborhood, your mood, and how long you have; it suggests three low-fuss
 activities and what to bring. Pick one, put the phone away, and go.
 
+Built for the Hacktoberfest Week 1 “Touch Grass” challenge. Read the
+[DEV post](https://dev.to/prarthana_sharma/trailbuddy-less-scrolling-more-fresh-air-45l5).
+
 ## Why open AI?
 
 TrailBuddy uses [Qwen 2.5 3B](https://ollama.com/library/qwen2.5) through
