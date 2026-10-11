@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183f34">
+    <meta name="description" content="A local-first outdoor idea generator that helps you spend less time on your screen.">
+    <title>TrailBuddy — make room for outside</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/" aria-label="TrailBuddy home">
+            <span class="brand-mark" aria-hidden="true">t</span>
+            <span>trailbuddy</span>
+        </a>
+        <span class="local-note"><span aria-hidden="true">●</span> Made to run on your device</span>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">A little fresh air goes a long way</p>
+                <h1 id="hero-title">Your next good hour is <em>out there.</em></h1>
+                <p class="hero-intro">Tell TrailBuddy what you’re in the mood for. Get a few simple ideas, pick one, and let the phone rest.</p>
+                <div class="hero-promise">
+                    <span aria-hidden="true">✳</span>
+                    No accounts. No maps to scroll. Just a small nudge outside.
+                </div>
+            </div>
+            <div class="hero-art" role="img" aria-label="Illustration of a winding trail through green hills">
+                <span class="sun"></span>
+                <span class="hill hill-back"></span>
+                <span class="hill hill-front"></span>
+                <span class="trail-line"></span>
+                <span class="art-label">the long way<br>is sometimes the good way</span>
+            </div>
+        </section>
+
+        <section class="planner" aria-labelledby="planner-title">
+            <div class="section-heading">
+                <p class="eyebrow">Your outside hour</p>
+                <h2 id="planner-title">What sounds good today?</h2>
+                <p>Nothing fancy needed. A neighborhood and a little time are plenty.</p>
+            </div>
+            <form id="suggestion-form">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="location">Where are you starting?</label>
+                        <input id="location" name="location" value="Nearby" maxlength="100" autocomplete="off" required>
+                        <span class="field-hint">A neighborhood or just “nearby”</span>
+                    </div>
+                    <div class="field">
+                        <label for="duration">How much time have you got?</label>
+                        <select id="duration" name="duration">
+                            <option>20 minutes</option>
+                            <option>45 minutes</option>
+                            <option selected>1 hour</option>
+                            <option>2 hours</option>
+                            <option>Half a day</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field interests-field">
+                    <label for="interests">What are you in the mood for?</label>
+                    <input id="interests" name="interests" value="A quiet nature walk" maxlength="200" autocomplete="off" required>
+                    <span class="field-hint">Birds, a run, gardening, a slow walk — anything goes</span>
+                </div>
+                <button id="submit-button" type="submit">
+                    <span>Find my outside hour</span>
+                    <span aria-hidden="true">↗</span>
+                </button>
+            </form>
+        </section>
+
+        <section id="result" class="results" aria-labelledby="results-title" aria-live="polite" hidden>
+            <div class="results-heading">
+                <div>
+                    <p class="eyebrow">A few ideas, just for you</p>
+                    <h2 id="results-title">Pick the one that feels right.</h2>
+                </div>
+                <span id="result-mode" class="mode-pill"></span>
+            </div>
+            <p id="result-notice" class="result-notice" hidden></p>
+            <div id="result-cards" class="activity-grid"></div>
+            <p class="leave-phone">Choose one, take what you need, and enjoy the time outside. You can always come back later.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with <a href="https://ollama.com/library/qwen2.5" target="_blank" rel="noreferrer">Qwen 2.5</a>, Ollama, and a fondness for fresh air.</p>
+        <p>TrailBuddy doesn’t know live weather or trail conditions. Check locally before heading out.</p>
+    </footer>
+</body>
+</html>
